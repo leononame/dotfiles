@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name = Bluetooth Settings
+Keywords = Settings;Control Center;Control Panel;System
+Icon = blueman
+Type = Application
+Exec = gnome-control-center bluetooth
+

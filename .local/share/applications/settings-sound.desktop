@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name = Sound Settings
+Keywords = Settings;Control Center;Control Panel;System
+Icon = volume-knob
+Type = Application
+Exec = gnome-control-center sound
+
