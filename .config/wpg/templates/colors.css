@@ -1,0 +1,53 @@
+@define-color background rgb(243,243,243);
+@define-color backgroundAlpha rgba(243,243,243,0.5);
+
+@define-color foreground rgb(8,3,3);
+@define-color foregroundAlpha rgba(8,3,3,0.5);
+
+@define-color color0 rgb(243,243,243);
+@define-color color0Alpha rgba(243,243,243,0.5);
+
+@define-color color1 rgb(46,179,152);
+@define-color color1Alpha rgba(46,179,152,0.5);
+
+@define-color color2 rgb(30,186,155);
+@define-color color2Alpha rgba(30,186,155,0.5);
+
+@define-color color3 rgb(15,209,171);
+@define-color color3Alpha rgba(15,209,171,0.5);
+
+@define-color color4 rgb(130,125,124);
+@define-color color4Alpha rgba(130,125,124,0.5);
+
+@define-color color5 rgb(132,128,127);
+@define-color color5Alpha rgba(132,128,127,0.5);
+
+@define-color color6 rgb(145,141,141);
+@define-color color6Alpha rgba(145,141,141,0.5);
+
+@define-color color7 rgb(205,204,205);
+@define-color color7Alpha rgba(205,204,205,0.5);
+
+@define-color color8 rgb(143,142,143);
+@define-color color8Alpha rgba(143,142,143,0.5);
+
+@define-color color9 rgb(99,91,90);
+@define-color color9Alpha rgba(99,91,90,0.5);
+
+@define-color color10 rgb(103,96,95);
+@define-color color10Alpha rgba(103,96,95,0.5);
+
+@define-color color11 rgb(115,109,109);
+@define-color color11Alpha rgba(115,109,109,0.5);
+
+@define-color color12 rgb(130,125,124);
+@define-color color12Alpha rgba(130,125,124,0.5);
+
+@define-color color13 rgb(132,128,127);
+@define-color color13Alpha rgba(132,128,127,0.5);
+
+@define-color color14 rgb(145,141,141);
+@define-color color14Alpha rgba(145,141,141,0.5);
+
+@define-color color15 rgb(8,3,3);
+@define-color color15Alpha rgba(8,3,3,0.5);

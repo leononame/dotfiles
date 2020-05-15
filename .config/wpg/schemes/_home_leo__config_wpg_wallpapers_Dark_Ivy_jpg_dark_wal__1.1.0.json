@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/leo/.config/wpg/wallpapers/Dark_Ivy.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#f3f3f3",
+        "foreground": "#080303",
+        "cursor": "#080303"
+    },
+    "colors": {
+        "color0": "#f3f3f3",
+        "color1": "#2eb398",
+        "color2": "#1eba9b",
+        "color3": "#0fd1ab",
+        "color4": "#827D7C",
+        "color5": "#84807F",
+        "color6": "#918D8D",
+        "color7": "#cdcccd",
+        "color8": "#8f8e8f",
+        "color9": "#635B5A",
+        "color10": "#67605F",
+        "color11": "#736D6D",
+        "color12": "#827D7C",
+        "color13": "#84807F",
+        "color14": "#918D8D",
+        "color15": "#080303"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/leo/.config/wpg/wallpapers/001.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0c1e25",
+        "foreground": "#e9e9d0",
+        "cursor": "#e9e9d0"
+    },
+    "colors": {
+        "color0": "#0c1e25",
+        "color1": "#45737C",
+        "color2": "#98997A",
+        "color3": "#28798A",
+        "color4": "#567984",
+        "color5": "#298FA4",
+        "color6": "#5E858B",
+        "color7": "#e9e9d0",
+        "color8": "#a3a391",
+        "color9": "#45737C",
+        "color10": "#98997A",
+        "color11": "#28798A",
+        "color12": "#567984",
+        "color13": "#298FA4",
+        "color14": "#5E858B",
+        "color15": "#e9e9d0"
+    }
+}

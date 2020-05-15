@@ -1,0 +1,17 @@
+window {{
+  margin: 5px;
+  border: 0px;
+  background-color: {background};
+  color: {foreground};
+}}
+
+#input {{
+  margin: 5px;
+  background-color: {color2};
+  color: {color0};
+}}
+
+#scroll {{
+  margin: 5px;
+  border: 2px solid {color2};
+}}
