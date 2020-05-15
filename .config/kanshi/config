@@ -1,0 +1,15 @@
+profile espa {
+     output eDP-1 disable
+     output "Goldstar Company Ltd LG FULL HD 0x00000101" mode 1920x1080 position 0,0
+     exec swaymsg workspace 1:web, move workspace to '"Goldstar Company Ltd LG FULL HD 0x00000101"'
+}
+
+profile home {
+     output eDP-1 disable #enable scale 1 mode 1920x1080 position 0,0
+     output "Samsung Electric Company SAMSUNG 0x00000001" mode 1920x1080 position 0,0
+}
+
+profile nomad {
+     output eDP-1 enable scale 1
+}
+
