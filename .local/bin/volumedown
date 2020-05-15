@@ -1,0 +1,32 @@
+#!/bin/bash
+# requires pamixer package to read out volume
+
+currentvolume() {
+	pamixer --get-volume
+}
+
+if [[ $(( $(currentvolume) - 5 )) -le 0 ]]; then
+	pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ 0%
+else
+	pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ -5%
+fi
+
+send_notification() {
+	volume=$(currentvolume)
+	count=$(( $volume / 10 ))
+	bar=$(seq -s "" $(( $count + 1 )) | sed 's/[0-9]//g')
+	symbol=""
+	if (( $(( $count * 10 - $volume )) == 0 )); then
+		symbol=""
+	fi
+	if (( $count == 10 )); then
+		symbol=""
+	fi
+	barempty=$(seq -s "" $(( 10 - count )) | sed 's/[0-9]//g')
+	# makoctl dismiss --all && \
+	notify-send -i audio-volume-high-symbolic.symbolic -c audio "$bar$symbol$barempty"
+}
+
+send_notification
+XDG_RUNTIME_DIR=/run/user/1000 paplay /usr/share/sounds/freedesktop/stereo/bell.oga
+

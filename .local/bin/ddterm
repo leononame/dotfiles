@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if swaymsg -t get_tree | grep ddterm; then
+	swaymsg '[app_id="ddterm"] scratchpad show'
+else
+	swaymsg 'exec termite --name ddterm'
+fi
