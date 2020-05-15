@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name = Hibernate
+Icon = system-suspend-hibernate
+Type = Application
+Exec = systemctl hibernate
+

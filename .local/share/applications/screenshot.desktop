@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name = Screenshot
+Exec = screenshot
+Terminal=false
+Type=Application
+Icon=org.gnome.Screenshot
