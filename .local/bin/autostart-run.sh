@@ -25,4 +25,5 @@ nohup pasystray > indicator >$LOGDIR/blueman.log 2>&1 & disown
 nohup nextcloud >$LOGDIR/nextcloud.log 2>&1 & disown
 nohup blueman-applet >$LOGDIR/blueman.log 2>&1 & disown
 nohup mopidy >$LOGDIR/blueman.log 2>&1 & disown
+nohup /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1  &disown
 
