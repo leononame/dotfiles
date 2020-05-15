@@ -20,8 +20,8 @@ nohup mako >$LOGDIR/mako.log 2>&1 & disown
 
 sleep 2
 ech "Starting apps"
-nohup nm-applet --indicator >$LOGDIR/blueman.log 2>&1 & disown
-nohup pasystray > indicator >$LOGDIR/blueman.log 2>&1 & disown
+# nohup nm-applet --indicator >$LOGDIR/blueman.log 2>&1 & disown
+# nohup pasystray > indicator >$LOGDIR/blueman.log 2>&1 & disown
 nohup nextcloud >$LOGDIR/nextcloud.log 2>&1 & disown
 nohup blueman-applet >$LOGDIR/blueman.log 2>&1 & disown
 nohup mopidy >$LOGDIR/blueman.log 2>&1 & disown

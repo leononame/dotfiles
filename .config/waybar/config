@@ -1,122 +1,149 @@
 {
-        "layer": "top", // Waybar at top layer
-                // "position": "bottom", // Waybar position (top|bottom|left|right)
-                "height": 40, // Waybar height (to be removed for auto height)
-                "margin-top": 8, // same as gaps in sway
-                "margin-left": 8,
-                // "width": 1280, // Waybar width
-                // Choose the order of the modules
-                "modules-left": ["sway/workspaces", "sway/mode"],
-                "modules-center": ["mpd"],
-                "modules-right": ["backlight", "battery", "clock", "tray"],
-                // Modules configuration
-                "sway/workspaces": {
-                        "disable-scroll": true,
-                        "all-outputs": true,
-                        "format": "{icon}",
-                        "format-icons": {
-                                "1:web": "",
-                                "2:term": "",
-                                "3:work": "",
-                                "4:media": "",
-                                "5:game": "",
-                                "6:chat": "",
-                                "10:mail": "",
-                                "urgent": "",
-                                "focused": "",
-                                "default": ""
-                        }
-                },
-                "sway/mode": {
-                        "tooltip": true,
-                        "format": "<span style=\"italic\">{}</span>"
-                },
-                "tray": {
-                        "tooltip": true,
-                        "icon-size": 21,
-                        "spacing": 10
-                },
-                "clock": {
-                        "tooltip": true,
-                        "on-click": "gnome-calendar",
-                        "format": "{:%d/%m/%Y %H:%M}"
-                },
-                "cpu": {
-                        "format": "{usage}% ",
-                        "tooltip": true
-                },
-                "memory": {
-                        "tooltip": true,
-                        "format": "{}% "
-                },
-                "temperature": {
-                        "tooltip": true,
-                        // "thermal-zone": 2,
-                        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-                        "critical-threshold": 80,
-                        // "format-critical": "{temperatureC}°C {icon}",
-                        "format": "{temperatureC}°C {icon}",
-                        "format-icons": ["", "", ""]
-                },
-                "backlight": {
-                        "tooltip": true,
-                        // "device": "acpi_video1",
-                        "format": "{percent:3}% {icon}",
-                        "format-icons": ["", ""]
-                },
-                "battery": {
-                        "tooltip": true,
-                        "states": {
-                                // "good": 95,
-                                "warning": 30,
-                                "critical": 15
-                        },
-                        "tooltip-format": "{time}",
-                        "format": "{capacity}% {icon}",
-                        "format-charging": "{capacity}%   ({time})",
-                        "format-plugged": "{capacity}% ",
-                        "format-full": "{capacity}% ",
-                        // "format-good": "", // An empty format will hide the module
-                        // "format-full": "",
-                        "format-icons": ["", "", "", "", ""]
-                },
-                "mpd" : {
-                  "max-length": 60,
-                	"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} | {elapsedTime:%M:%S}/{totalTime:%M:%S}",
-                	"format-disconnected": "",
-                	"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
-                	"interval": 2,
-                  "on-click-right": "swaymsg 'workspace 4:media'",
-                  "on-click": "music-play-pause",
-                	/* "consume-icons": { */
-                	/* 	"on": " " // Icon shows only when "consume" is on */
-                	/* }, */
-                	/* "random-icons": { */
-                	/* 	"on": "<span color=\"#1eba9b\"></span> ", // Icon grayed out when "random" is off */
-                	/* 	"off": " " */
-                	/* }, */
-                	"repeat-icons": {
-                		"on": " "
-                	},
-                	"single-icons": {
-                		"on": "1 "
-                	},
-                	"state-icons": {
-                		"paused": "",
-                		"playing": ""
-                	},
-                	"tooltip-format": "MPD (connected)",
-                	"tooltip-format-disconnected": "MPD (disconnected)"
-                },
-                "custom/spotify": {
-                        "tooltip": true,
-                        "format": " {}",
-                        "return-type": "json",
-                        "max-length": 40,
-                        //"interval": 30, // Remove this if your script is endless and write in loop
-                        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null", // Script in resources/custom_modules folder
-                        "exec-if": "pgrep spotify",
-                        "on-click-right": "swaymsg 'workspace 4:media'",
-                        "on-click": "playerctl play-pause"
-                }
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+    "margin-top": 8, // same as gaps in sway
+    "margin-left": 8,
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "mpd"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "clock",
+        "tray"
+    ],
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1:web": "",
+            "2:term": "",
+            "3:work": "",
+            "4:media": "",
+            "5:game": "",
+            "6:chat": "",
+            "10:mail": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "sway/mode": {
+        "tooltip": true,
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        "tooltip": true,
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip": true,
+        "on-click": "gnome-calendar",
+        "format": "{:%d/%m/%Y %H:%M}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": true
+    },
+    "memory": {
+        "tooltip": true,
+        "format": "{}% "
+    },
+    "temperature": {
+        "tooltip": true,
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "backlight": {
+        "tooltip": true,
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "tooltip": true,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip-format": "{time}",
+        "on-click": "gnome-control-center power",
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}%   ({time})",
+        "format-plugged": "{capacity}% ",
+        "format-full": "{capacity}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "mpd": {
+        "max-length": 60,
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} | {elapsedTime:%M:%S}/{totalTime:%M:%S}",
+        "format-disconnected": "",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
+        "interval": 2,
+        "on-click-right": "swaymsg 'workspace 4:media'",
+        "on-click": "music-play-pause",
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "pulseaudio": {
+        "format": "{volume:3}% {icon}",
+        "format-bluetooth": "{volume:3}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "phone": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "gnome-control-center sound",
+        "on-click-right": "pavucontrol"
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{signalStrength}% ",
+        "format-ethernet": "{ifname} ",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "gnome-control-center wifi",
+        "on-click-right": "gnome-control-center network",
+        "max-length": 50
+    }
 }
