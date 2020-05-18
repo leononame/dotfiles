@@ -1,3 +1,3 @@
 #!/bin/bash
 
-~/.local/bin/autostart-run.sh >/var/log/autostart/$(date +%s).log 2>&1
+~/.local/bin/autostart-run.sh >/var/log/autostart/autostart.log 2>&1
