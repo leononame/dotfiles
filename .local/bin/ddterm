@@ -1,7 +1,9 @@
 #!/bin/bash
 
+#drop down terminal
+
 if swaymsg -t get_tree | grep ddterm; then
-	swaymsg '[app_id="ddterm"] scratchpad show'
+	swaymsg '[title="ddterm"] scratchpad show'
 else
-	swaymsg 'exec termite --name ddterm'
+	swaymsg 'exec alacritty -t ddterm'
 fi
