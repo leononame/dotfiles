@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/bin/sway -d 2> /var/log/autostart/sway.log
+
