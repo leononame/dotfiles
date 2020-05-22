@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name = Windows 10
+Keywords = Affinity Designer;Windows;Affinity;Serif
+Icon = windows
+Type = Application
+Exec = env QT_QPA_PLATFORM=xcb vboxmanage startvm Win10
+
