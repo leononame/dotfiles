@@ -188,6 +188,8 @@ for_window [app_id="desktopclient.nextcloud.com.nextcloud"] floating enable; bor
 for_window [app_id="blueman-.*"] floating enable; border pixel; resize set 900 300;
 for_window [app_id="evolution-alarm-notify"] floating enable; border pixel; move to workspace current; resize 900x300;
 for_window [title="Appointment - .*"] floating enable; border pixel;
+for_window [title="Firefox - Sharing Indicator"] floating enable;
+for_window [title="Picture-in-Picture"] floating enable; sticky enable;
 # floating window for godot
 for_window [instance="Godot_Engine"] floating enable
 for_window [instance="Godot_Editor"] floating disable
