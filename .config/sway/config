@@ -187,6 +187,7 @@ for_window [app_id="nm-connection-editor"] floating enable; border pixel;
 for_window [app_id="desktopclient.nextcloud.com.nextcloud"] floating enable; border pixel;
 for_window [app_id="blueman-.*"] floating enable; border pixel; resize set 900 300;
 for_window [app_id="evolution-alarm-notify"] floating enable; border pixel; move to workspace current; resize 900x300;
+for_window [instance="bitwarden"] floating enable; border pixel; resize 800 set 800 600;
 for_window [title="Appointment - .*"] floating enable; border pixel;
 for_window [title="Firefox - Sharing Indicator"] floating enable;
 for_window [title="Picture-in-Picture"] floating enable; sticky enable;
@@ -199,7 +200,7 @@ for_window [title="^Android Emulator -"] floating enable
 
 # Scratchpad
 bindsym $mod+Shift+y move scratchpad
-bindsym $mod+y [instance="^(?!ddterm).*$"] scratchpad show
+bindsym $mod+y [title="^(?!ddterm).*$"] scratchpad show
 
 # Multimedia Keys
 # volume
@@ -214,6 +215,7 @@ bindsym XF86AudioPrev exec --no-startup-id music-previous
 # App shortcuts
 bindsym $mod+w exec "/usr/bin/firefox"
 bindsym $mod+n exec "/usr/bin/nautilus"
+bindsym $mod+k exec "/usr/bin/bitwarden"
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id ~/.local/bin/intel-backlight-up # increase screen brightness
