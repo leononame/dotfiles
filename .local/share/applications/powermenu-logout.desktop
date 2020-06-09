@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name = Logout
-Icon = system-logout
-Type = Application
-Exec = swaymsg exit
-

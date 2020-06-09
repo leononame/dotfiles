@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name = Print Settings
-Keywords = Settings;Control Center;Control Panel;System
-Icon = printer
-Type = Application
-Exec = gnome-control-center printers
-

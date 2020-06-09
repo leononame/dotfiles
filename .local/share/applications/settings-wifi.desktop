@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name = WiFi Settings
-Keywords = Settings;Control Center;Control Panel;System
-Icon = wicd
-Type = Application
-Exec = gnome-control-center wifi
-

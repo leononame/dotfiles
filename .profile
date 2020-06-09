@@ -14,9 +14,8 @@ export SSH_AUTH_SOCK
 
 export LC_TIME=es_ES.UTF-8
 
-export QT_QPA_PLATFORM=wayland
+# export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
-export GTK_THEME=vimix-light-beryl
 
 # No dotnet telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

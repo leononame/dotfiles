@@ -1,9 +1,0 @@
-#!/bin/bash
-
-#drop down terminal
-
-if swaymsg -t get_tree | grep ddterm; then
-	swaymsg '[title="ddterm"] scratchpad show'
-else
-	swaymsg 'exec alacritty -t ddterm'
-fi

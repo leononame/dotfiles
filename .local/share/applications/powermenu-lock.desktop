@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name = Lock
-Icon = system-lock-screen
-Type = Application
-Exec = i3lock-fancy-rapid 10 10
-

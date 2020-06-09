@@ -1,3 +1,0 @@
-#!/bin/bash
-
-~/.local/bin/autostart-run.sh >/var/log/autostart/autostart.log 2>&1
