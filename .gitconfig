@@ -1,6 +1,7 @@
 [user]
 	email = leononame@lho.io
 	name = Leo
+	signingkey = CD29B7CAEEDD4DD4
 [url "ssh://git@heroku.com/"]
 	insteadOf = https://git.heroku.com/
 [url "git@github.com:"]
@@ -51,3 +52,9 @@
 	required = true
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
+[rerere]
+	enabled = true
+[commit]
+	gpgsign = true

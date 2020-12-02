@@ -6,7 +6,6 @@
 " https://github.com/junegunn/vim-plug
 "----------------------------------------------
 call plug#begin('~/.vim/plugged')
-
 " Dependencies
 Plug 'jodosha/vim-godebug'
 Plug 'Shougo/neocomplcache'        " Depenency for Shougo/neosnippet
@@ -20,7 +19,6 @@ Plug 'b4b4r07/vim-sqlfmt'
 Plug 'vim-scripts/SQLUtilities'
 Plug 'vim-syntastic/syntastic'
 Plug 'nathangrigg/vim-beancount'
-Plug 'easymotion/vim-easymotion'
 Plug 'qpkorr/vim-bufkill'
 Plug 'bogado/file-line'
 Plug 'w0rp/ale'
@@ -50,6 +48,15 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
+
+" Nvim only plugins (no vs code)
+if !exists('g:vscode')
+    " Plug 'easymotion/vim-easymotion'
+    Plug 'asvetliakov/vim-easymotion'
+endif
+if exists('g:vscode')
+    Plug 'asvetliakov/vim-easymotion'
+endif
 
 " Vim only plugins
 if !has('nvim')
@@ -87,7 +94,6 @@ Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'kaicataldo/material.vim'
 Plug 'ayu-theme/ayu-vim'
-
 call plug#end()
 
 "----------------------------------------------
@@ -154,15 +160,15 @@ nnoremap <space> zz
 " Colors
 "----------------------------------------------
 if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
 "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
 "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
 " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
 if (has("termguicolors"))
-  set termguicolors
+    set termguicolors
 endif
 
 set background=dark
@@ -434,32 +440,32 @@ nnoremap <F3> :TagbarToggle<cr>
 " Language: Go
 " Tagbar configuration for Golang
 let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+            \ 'ctagstype' : 'go',
+            \ 'kinds'     : [
+            \ 'p:package',
+            \ 'i:imports:1',
+            \ 'c:constants',
+            \ 'v:variables',
+            \ 't:types',
+            \ 'n:interfaces',
+            \ 'w:fields',
+            \ 'e:embedded',
+            \ 'm:methods',
+            \ 'r:constructor',
+            \ 'f:functions'
+            \ ],
+            \ 'sro' : '.',
+            \ 'kind2scope' : {
+            \ 't' : 'ctype',
+            \ 'n' : 'ntype'
+            \ },
+            \ 'scope2kind' : {
+            \ 'ctype' : 't',
+            \ 'ntype' : 'n'
+            \ },
+            \ 'ctagsbin'  : 'gotags',
+            \ 'ctagsargs' : '-sort -silent'
+            \ }
 
 "----------------------------------------------
 " Plugin: plasticboy/vim-markdown
@@ -499,13 +505,13 @@ nnoremap <F2> :NERDTreeToggle<cr>
 
 " Files to ignore
 let NERDTreeIgnore = [
-    \ '\~$',
-    \ '\.pyc$',
-    \ '^\.DS_Store$',
-    \ '^node_modules$',
-    \ '^.ropeproject$',
-    \ '^__pycache__$'
-\]
+            \ '\~$',
+            \ '\.pyc$',
+            \ '^\.DS_Store$',
+            \ '^node_modules$',
+            \ '^.ropeproject$',
+            \ '^__pycache__$'
+            \]
 
 " Close vim if NERDTree is the only opened window.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -531,8 +537,8 @@ let g:delve_backend = "native"
 " Below you can disable default snippets for specific languages. If you set the
 " language to _ it sets the default for all languages.
 let g:neosnippet#disable_runtime_snippets = {
-    \ 'go': 1
-\}
+            \ 'go': 1
+            \}
 
 " Keybindings
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -547,9 +553,9 @@ let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 "----------------------------------------------
 " Path to wiki
 let g:vimwiki_list = [{
-        \ 'path': '~/Nextcloud/vimwiki',
-        \ 'syntax': 'markdown',
-        \ 'ext': '.vimwiki.md'}]
+            \ 'path': '~/Nextcloud/vimwiki',
+            \ 'syntax': 'markdown',
+            \ 'ext': '.vimwiki.md'}]
 
 au FileType vimwiki set expandtab
 au FileType vimwiki set shiftwidth=2

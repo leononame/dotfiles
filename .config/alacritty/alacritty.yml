@@ -13,7 +13,8 @@ font:
   size: 10.0
 
 draw_bold_text_with_bright_colors: false
-dynamic_title: false
+window:
+  dynamic_title: false
 # Colors (Gruvbox dark)
 colors:
   # Default colors
@@ -51,3 +52,14 @@ selection:
 
 live_config_reload: true
 
+key_bindings:
+  # - { key: Paste,                                action: Paste          }
+  # - { key: Copy,                                 action: Copy           }
+  # - { key: L,         mods: Control,             action: ClearLogNotice }
+  # - { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
+  - { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollHalfPageUp,  }
+  - { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollHalfPageDown }
+  - { key: PageUp,    mods: Control, mode: ~Alt, action: ScrollPageUp,  }
+  - { key: PageDown,  mods: Control, mode: ~Alt, action: ScrollPageDown }
+  - { key: Home,                     mode: ~Alt, action: ScrollToTop,   }
+  - { key: End,                      mode: ~Alt, action: ScrollToBottom }
